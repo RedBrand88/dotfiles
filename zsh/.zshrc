@@ -1,7 +1,7 @@
 # ---- Basics / env -----------------------------------------------------------
 export EDITOR=nvim
-alias zshrc="$EDITOR $HOME/dotfiles/zsh/.zshrc"
-alias zsh="source $HOME/dotfiles/zsh/.zshrc"
+alias zshrc="$EDITOR $HOME/.zshrc"
+alias zsh="source $HOME/.zshrc"
 alias lsa="ls -a"
 alias vim="nvim"
 
