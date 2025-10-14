@@ -25,6 +25,31 @@ unsetopt BEEP
 
 # vi mode
 bindkey -v
+# ---- Vi-mode cursor shapes (Ghostty/iTerm/Kitty support DECSCUSR) ----
+# 2 = steady block, 6 = steady bar
+_cursor_block() { printf '\e[2 q'; }   # NORMAL mode
+_cursor_bar()   { printf '\e[6 q'; }   # INSERT mode
+
+# Switch shape when the keymap changes
+function zle-keymap-select {
+  case $KEYMAP in
+    vicmd) _cursor_block ;;            # ESC -> NORMAL
+    main|viins) _cursor_bar ;;         # any insert state
+  esac
+  zle -R                                # refresh prompt
+}
+zle -N zle-keymap-select
+
+# Set initial cursor when line editor starts
+function zle-line-init {
+  zle -K viins
+  _cursor_bar
+}
+zle -N zle-line-init
+
+# Optional: ensure a sane cursor before each external command runs
+preexec() { _cursor_block; }
+
 export KEYTIMEOUT=1
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
