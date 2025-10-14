@@ -1,10 +1,9 @@
 # ---- Basics / env -----------------------------------------------------------
 export EDITOR=nvim
-alias zshrc="$EDITOR $HOME/.zshrc"
-alias zsh="source $HOME/.zshrc"
+alias zshrc="$EDITOR $HOME/dotfiles/zsh/.zshrc"
+alias zsh="source $HOME/dotfiles/zsh/.zshrc"
 alias lsa="ls -a"
 alias vim="nvim"
-export AIDER_EDITOR=nvim
 
 # History
 HISTSIZE=10000
