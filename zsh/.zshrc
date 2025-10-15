@@ -56,9 +56,6 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# ---- Remove conflicting cursor-shape hacks (Ghostty+p10k handle this) ----
-# (deleted: zle-keymap-select, zle-line-init, preexec echo -ne '\e[... q' lines)
-
 # fzf keybindings/completion (safe)
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
