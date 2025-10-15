@@ -98,8 +98,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
 [ -f '/Users/bravo/Downloads/google-cloud-sdk/completion.zsh.inc' ] && . '/Users/bravo/Downloads/google-cloud-sdk/completion.zsh.inc'
 
 # ---- Plugins (order matters: autosuggestions, then highlighting last) -------
-source /Users/bravo/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /Users/bravo/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Optional: colors available for scripts that need them (doesn't set PS1)
 autoload -U colors && colors
