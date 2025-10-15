@@ -8,5 +8,5 @@ elif command -v pacman >/dev/null; then
 fi
 
 cd ~/dotfiles
-stow -t ~ zsh nvim starship ghostty git
+stow -t ~ zsh nvim starship ghostty
 echo "dotfiles installed ✅"
