@@ -86,6 +86,41 @@ alias grs='git restore'
 alias gst='git stash'
 alias gstp='git stash pop'
 
+#Domo specific alias'
+gcod() {
+  if [ -z "$1" ]; then
+    echo "Error: Please provide a ticket number. Usage: gcod <TICKET_NUMBER>"
+    return 1
+  fi
+  git checkout users/brandon.bashein/$1
+}
+gcbd() {
+  if [ -z "$1" ]; then
+    echo "Error: Please provide a ticket number. Usage: gcb <TICKET_NUMBER>"
+    return 1
+  fi
+  git checkout -b users/brandon.bashein/$1
+}
+gpud() {
+  if [ -z "$1" ]; then
+    echo "Error: Please provide a ticket number. Usage: gpud <TICKET_NUMBER>"
+    return 1
+  fi
+  git push --set-upstream origin users/brandon.bashein/$1
+}
+gbdd() {
+  git branch | grep '^ users' | xargs -r git branch -d
+}
+
+alias domorun='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations --noTypeCheck'
+
+export PNPM_HOME="/Users/brandon.bashein/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# End Domo specific alias'
+
 # Your env vars / SDKs (keep as needed)
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/bravo/.config/bread-machine-a72fa-6bbf07870e8b.json"
 export NVM_DIR="$HOME/.nvm"
