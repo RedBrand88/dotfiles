@@ -8,5 +8,9 @@ elif command -v pacman >/dev/null; then
 fi
 
 cd ~/dotfiles
-stow -t ~ zsh nvim starship ghostty
+# run stow multiple times to make it easy to comment out unwanted packages
+stow -t ~ zsh 
+# stow -t ~ nvim 
+stow -t ~ starship 
+stow -t ~ ghostty
 echo "dotfiles installed ✅"
