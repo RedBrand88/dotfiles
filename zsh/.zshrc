@@ -121,6 +121,44 @@ case ":$PATH:" in
 esac
 # End Domo specific alias'
 
+# ---------- Filesystem ----------
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# Use zoxide instead of redefining cd
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+else
+  # fallback cd behavior
+  alias ..='cd ..'
+  alias ...='cd ../..'
+  alias ....='cd ../../..'
+fi
+
+# ---------- Zoxide + FZF Integration ----------
+# Use Alt-c to jump to a directory from zoxide using fzf
+fzf_z() {
+  local dir
+  dir=$(zoxide query -l | fzf --height 40% --reverse --prompt='Jump to dir> ') || return
+  if [[ -n "$dir" ]]; then
+    cd "$dir" || return
+    zle reset-prompt
+  fi
+}
+zle -N fzf_z
+bindkey '^[c' fzf_z
+
+# ---------- Fuzzy File Picker -------------------
+bindkey '^T' fzf-file-widget
+
+# open files with system default app
+open() {
+  xdg-open "$@" >/dev/null 2>&1 &
+}
+
 # Your env vars / SDKs (keep as needed)
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/bravo/.config/bread-machine-a72fa-6bbf07870e8b.json"
 export NVM_DIR="$HOME/.nvm"
