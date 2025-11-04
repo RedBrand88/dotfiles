@@ -57,6 +57,7 @@ return {
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Search buffers' })
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Search help tags' })
     vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Resume telescope search' })
+    vim.keymap.set('n', '<leader>fgr', builtin.lsp_references, { desc = 'Open LSP References' })
     vim.keymap.set('n', '<leader>fWs', function()
       local word = vim.fn.expand("<cWORD>")
       builtin.grep_string({ search = word })
