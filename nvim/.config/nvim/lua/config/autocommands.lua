@@ -21,6 +21,21 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 })
 
 vim.api.nvim_create_autocmd("BufNewFile", {
+  pattern = "*.svg",
+  callback = function()
+    local lines = {
+      "<svg xmlns='http://www.w3.org/2000/svg'>",
+      "  ",
+      "</svg>",
+    }
+
+    vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+
+    vim.api.nvim_win_set_cursor(0, { 1, 1 })
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
   pattern = "*.go",
   callback = function()
     local lines = {
