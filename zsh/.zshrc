@@ -115,6 +115,8 @@ gbdd() {
 alias domorun='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations --noTypeCheck'
 alias domoruntypecheck='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations'
 
+alias embedrun='pnpm start --gateway https://api.dev.domo.com'
+
 export PNPM_HOME="/Users/brandon.bashein/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
