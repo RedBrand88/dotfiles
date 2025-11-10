@@ -109,7 +109,7 @@ gpud() {
   git push --set-upstream origin users/brandon.bashein/$1
 }
 gbdd() {
-  git branch | grep '^ users' | xargs -r git branch -d
+  git branch | grep '^\s*users' | xargs -r git branch -d 
 }
 
 alias domorun='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations --noTypeCheck'
