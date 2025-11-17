@@ -114,6 +114,7 @@ gbdd() {
 
 alias domorun='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations --noTypeCheck'
 alias domoruntypecheck='pnpm start --watchI18n --proxy="https://*.domo.com" --port=80 --skip-translations'
+alias runoldbranch='./runPnpm start --watchI18n --proxy"https://*.domo.com" --port=80 --skip-translations --noTypeCheck'
 
 alias embedrun='pnpm start --gateway https://api.dev.domo.com'
 
