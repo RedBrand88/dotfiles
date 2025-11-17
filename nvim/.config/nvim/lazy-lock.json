@@ -6,27 +6,11 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "b1d9a914b02ba5660f1e272a03314b31d4576fe2" },
   "mason.nvim": { "branch": "main", "commit": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800" },
   "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" },
-  "nvim-cmp": { "branch": "main", "commit": "d78fb3b64eedb701c9939f97361c06483af575e0" },
-  "nvim-dap": { "branch": "master", "commit": "b38f7d30366d9169d0a623c4c85fbcf99d8d58bb" },
+  "nvim-cmp": { "branch": "main", "commit": "d97d85e01339f01b842e6ec1502f639b080cb0fc" },
+  "nvim-dap": { "branch": "master", "commit": "5860c7c501eb428d3137ee22c522828d20cca0b3" },
   "nvim-dap-ui": { "branch": "master", "commit": "cf91d5e2d07c72903d052f5207511bf7ecdb7122" },
   "nvim-jdtls": { "branch": "master", "commit": "38d265ee4d45da73a083ca83e41de7d37567be5c" },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  "nvim-lspconfig": { "branch": "master", "commit": "c6f05c0900144f027a8a0332566878e398d457b5" },
-=======
-  "nvim-lspconfig": { "branch": "master", "commit": "95fe3c170753238d3ca4f760e79a991400677abc" },
->>>>>>> Stashed changes
-=======
-  "nvim-lspconfig": { "branch": "master", "commit": "95fe3c170753238d3ca4f760e79a991400677abc" },
->>>>>>> Stashed changes
-=======
-  "nvim-lspconfig": { "branch": "master", "commit": "95fe3c170753238d3ca4f760e79a991400677abc" },
->>>>>>> Stashed changes
-=======
-  "nvim-lspconfig": { "branch": "master", "commit": "95fe3c170753238d3ca4f760e79a991400677abc" },
->>>>>>> Stashed changes
+  "nvim-lspconfig": { "branch": "master", "commit": "dc7e7c7699cc01b1b6fefa97f9b496d8f447d7a1" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "5ca4aaa6efdcc59be46b95a3e876300cfead05ef" },
   "nvim-web-devicons": { "branch": "master", "commit": "8dcb311b0c92d460fac00eac706abd43d94d68af" },
